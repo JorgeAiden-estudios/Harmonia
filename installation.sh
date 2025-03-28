@@ -1,0 +1,6 @@
+## 
+
+cd harmonia
+
+npm i
+
