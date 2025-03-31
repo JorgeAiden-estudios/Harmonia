@@ -1,4 +1,6 @@
-## 
+## npm run dev
+
+## install node 23.8.0
 
 cd harmonia
 
