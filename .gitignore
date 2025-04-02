@@ -8,7 +8,7 @@ lerna-debug.log*
 .pnpm-debug.log*
 
 # Password
-
+secrets.txt
 pswrd.txt
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
