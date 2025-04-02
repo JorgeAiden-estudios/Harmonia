@@ -31,9 +31,9 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <SupabaseProvider>
           <UserProvider>
-          <Sidebar>
-            {children}
-          </Sidebar>
+            <Sidebar>
+              {children}
+            </Sidebar>
           </UserProvider>
         </SupabaseProvider>
       </body>
