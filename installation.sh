@@ -14,3 +14,5 @@ npm i supabase@">=1.8.1" --save-dev
 
 npm install @supabase/auth-helpers-nextjs
 npm install @supabase/auth-helpers-react
+
+npm install stripe
