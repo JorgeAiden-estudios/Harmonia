@@ -22,3 +22,21 @@ npm install @supabase/auth-helpers-nextjs
 npm install @supabase/auth-helpers-react
 
 npm install stripe
+
+#AUTENTICACION CORAL
+npm install @radix-ui/react-dialog
+
+#despues npm run dev
+
+#creamos en hooks useAuthModal.ts y dentro abrimos terminal, le damos a clear e instalamos el siguiente comando
+
+npm install zustand
+
+#despues de nuevo npm run dev
+
+#de nuevo en AuthModal.tsx le damos a clear y vamos a instalar algo nuevo
+ npm install @supabase/auth-ui-react
+
+#clear de nuevo e instalamos otro nuevo paquete
+npm install @supabase/auth-ui-shared
+#despues npm run dev
