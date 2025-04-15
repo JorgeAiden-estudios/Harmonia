@@ -40,3 +40,11 @@ npm install zustand
 #clear de nuevo e instalamos otro nuevo paquete
 npm install @supabase/auth-ui-shared
 #despues npm run dev
+
+npm install react-hot-toast
+
+npm install react-hook-formç
+
+npm install uniqid
+
+npm install -D @types/uniqid
