@@ -39,10 +39,10 @@ export const revalidate = 0;
 
 export default async function RootLayout({
   children,
-}: Readonly<{
+}: {
 
   children: React.ReactNode
-}>) {
+}) {
   const userSongs = await getSongsByUserId(); 
 
   return (
@@ -59,7 +59,5 @@ export default async function RootLayout({
         </SupabaseProvider>
       </body>
     </html>
-  );
+  )
 }
-// ESTO IBA EN EL BODY 
-// </body> </html>{`${geistSans.variable} ${geistMono.variable} antialiased`}> 

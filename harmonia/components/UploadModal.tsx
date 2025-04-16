@@ -116,7 +116,7 @@ const UploadModal = () => {
             setIsLoading(false);
           
         }
-    
+    }
     
 
   return (
