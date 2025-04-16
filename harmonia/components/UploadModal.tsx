@@ -9,6 +9,8 @@ import { useRouter } from 'next/navigation';
 import  useUploadModal  from '@/hooks/useUploadModal';
 import {useUser} from '@/hooks/useUser';
 
+
+
 import Modal from './Modal';
 import Input from './Input';
 import Button from './Button';
@@ -41,6 +43,7 @@ const UploadModal = () => {
             reset();
             uploadModal.onClose();
         }
+    }
 
 
     const onSubmit : SubmitHandler<FieldValues> =  async(values) => {
@@ -113,7 +116,8 @@ const UploadModal = () => {
             setIsLoading(false);
           
         }
-    }
+    
+    
 
   return (
     <Modal
@@ -176,6 +180,7 @@ const UploadModal = () => {
       </form>
     </Modal>
   );
-}
+
+};
 
 export default UploadModal;

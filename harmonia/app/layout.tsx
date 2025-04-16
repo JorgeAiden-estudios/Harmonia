@@ -1,9 +1,8 @@
 
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "./global.css";
+import "./globals.css";
 
-import { Figtree } from "next/font/google"
 
 import Sidebar from "@/components/Sidebar";
 import SupabaseProvider from "@/providers/SupabaseProvider";

@@ -48,3 +48,5 @@ npm install react-hook-formç
 npm install uniqid
 
 npm install -D @types/uniqid
+
+npm install query-string

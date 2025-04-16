@@ -4,9 +4,9 @@ import { twMerge } from "tailwind-merge";
 import { RxCaretLeft, RxCaretRight } from "react-icons/rx";
 import { HiHome } from "react-icons/hi";
 import { BiSearch } from "react-icons/bi";
-import { useSupabaseClient, useUser } from "@supabase/auth-helpers-react";
+import { useSupabaseClient } from "@supabase/auth-helpers-react";
 import { FaUserAlt } from "react-icons/fa";
-import toast, { Toast } from "react-hot-toast";
+import { toast } from "react-hot-toast";
 
 import useAuthModal from "@/hooks/useAuthModal";
 import { useUser } from "@/hooks/useUser";
@@ -119,24 +119,10 @@ const Header: React.FC<HeaderProps> = ({
                     transition
                     "
                     >
-                        <HiHome className="text-black" size={20}/>
+                        <BiSearch className="text-black" size={20}/>
         
                     </button>
-                    <button
-                    className="
-                    rounded-full
-                    p-2
-                    bg-white
-                    flex
-                    items-center
-                    justify-center
-                    hover:opacity-75
-                    transition
-                    "
-                >
-                        <BiSearch className="text-black" size={20}/>
-                    </button>
-                </div>
+                    </div>
                 <div className="
                 flex 
                 justify-between 
@@ -146,24 +132,21 @@ const Header: React.FC<HeaderProps> = ({
                 >
                     {user ? (
                         <div className="flex gap-x-4 items-center">
-                            <Button 
-                            onClick={handleLogout} 
-                            className="
-                            bg-white
-                            px-6
-                            py-2
-                            "
+                            <Button
+                            onClick={handleLogout}
+                            className="bg-white px-6 py-2"
                             >
-                                Cerrar Sesión
+                                Logout
                             </Button>
                             <Button
-                            onClick={() => router.push("/account")}
+                            onClick={() => router.push('/account')}
                             className="bg-white"
                             >
                                 <FaUserAlt />
                             </Button>
-                            <Button
-                    ) : (
+                         </div>
+                    ) : ( 
+                    
                     <>
                     <div>
                         <Button 
