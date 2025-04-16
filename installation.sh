@@ -43,7 +43,7 @@ npm install @supabase/auth-ui-shared
 
 npm install react-hot-toast
 
-npm install react-hook-formç
+npm install react-hook-form
 
 npm install uniqid
 
