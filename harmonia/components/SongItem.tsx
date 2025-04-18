@@ -51,7 +51,7 @@ const SongItem: React.FC<SongItemProps> = ({
             >
                 <Image
                     className="object-cover"
-                    src={imagePath || "/images/liked.png"}
+                    src={imagePath || "/images/favs.png"}
                     fill
                     alt="Image"
                 />

@@ -49,7 +49,7 @@ const handleClick = () => {
         >
             <Image 
             fill
-            src={imageUrl || "/images/liked.png"}   
+            src={imageUrl || "/images/favs.png"}   
             alt="Media Item"
             className="
             object-cover"

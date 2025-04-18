@@ -3,7 +3,8 @@
 import uniqid from "uniqid";
 import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 import { useState } from "react";
-import { toast } from 'react-hot-toast';import { useSupabaseClient } from '@supabase/auth-helpers-react';
+import { toast } from 'react-hot-toast';
+import { useSupabaseClient } from '@supabase/auth-helpers-react';
 import { useRouter } from 'next/navigation';
 
 import  useUploadModal  from '@/hooks/useUploadModal';
@@ -35,8 +36,8 @@ const UploadModal = () => {
             title: "",
             song: null,
             image: null,
-        },
-    });
+        }
+    })
 
     const onChange = (open: boolean) => {
         if (!open) {
@@ -61,12 +62,12 @@ const UploadModal = () => {
         const uniqueID = uniqid();
         //UPLOAD SONG
 
-        const { data: songData, error: songError } = await supabaseClient
+        const { data: songData, error: songError, } = await supabaseClient
             .storage
             .from("songs")
             .upload(`song-${values.title}-${uniqueID}`, songFile, {
                 cacheControl: "3600",
-                upsert: false,
+                upsert: false
             });
 
         if (songError) {
@@ -75,12 +76,12 @@ const UploadModal = () => {
         }
 
         //UPLOAD IMAGE
-        const { data: imageData, error: imageError } = await supabaseClient
+        const { data: imageData, error: imageError, } = await supabaseClient
         .storage
         .from("images")
         .upload(`image-${values.title}-${uniqueID}`, imageFile, {
             cacheControl: "3600",
-            upsert: false,
+            upsert: false
         });
 
         if (imageError) {
@@ -97,11 +98,11 @@ const UploadModal = () => {
                 title: values.title,    
                 author: values.author,
                 image_path: imageData.path,
-                song_path: songData.path,
+                song_path: songData.path
             });
             if (supabaseError) {
                 setIsLoading(false);
-                return toast.error("supabaseError.message");
+                return toast.error(supabaseError.message);
             }
 
             router.refresh();
@@ -181,6 +182,6 @@ const UploadModal = () => {
     </Modal>
   );
 
-};
+}
 
 export default UploadModal;
