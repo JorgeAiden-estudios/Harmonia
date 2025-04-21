@@ -30,7 +30,7 @@ export default async function Home() {
             gap-3 mt-4">
               <ListItem image="/images/favs.png"
               name="Favoritos"
-              href="Favs"/>
+              href="liked"/>
 
             </div>
           </div>
