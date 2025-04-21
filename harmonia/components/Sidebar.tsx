@@ -4,19 +4,28 @@ import { usePathname } from "next/navigation";
 import { useMemo } from "react";
 import { HiHome } from "react-icons/hi";
 import { BiSearch } from "react-icons/bi";
+
+import { Song } from "@/types";
+
 import Box from "./Box";
 import SidebarItem from "./SidebarItem";
 import Library from "./Library";
 
 
 
+
+
 // Se define una interfaz SidebarProps para especificar las propiedades que acepta el componente.
 interface SidebarProps {
-    children: React.ReactNode; // La propiedad "children" representa cualquier contenido que se pase dentro del componente.
-}
+    children: React.ReactNode;
+    songs: Song [] // La propiedad "children" representa cualquier contenido que se pase dentro del componente.
+};
 
 //Se crea el componente Sidebar como una función de React (React.FC). Dentro del div se renderiza el contenido
-const Sidebar: React.FC<SidebarProps> = ({ children }) => {
+const Sidebar: React.FC<SidebarProps>  = ({ 
+    children, 
+    songs 
+}) => {
 
         const pathname = usePathname();
 
@@ -59,7 +68,7 @@ const Sidebar: React.FC<SidebarProps> = ({ children }) => {
                 </div>
             </Box>
             <Box className="overflow-y-auto h-full">
-                <Library />
+                <Library songs={songs} />
             </Box>
         </div>
         <main className="h-full flex-1 overflow-y-auto py-2">
