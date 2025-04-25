@@ -56,3 +56,7 @@ npm install query-string
 npm install @radix-ui/react-slider
 
 npm install use-sound
+
+#Stripe 
+npm install react-spinners
+
