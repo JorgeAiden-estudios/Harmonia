@@ -50,3 +50,9 @@ npm install uniqid
 npm install -D @types/uniqid
 
 npm install query-string
+
+# INSTALAR PARA SONIDO 
+
+npm install @radix-ui/react-slider
+
+npm install use-sound
