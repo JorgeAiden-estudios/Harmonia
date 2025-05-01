@@ -60,3 +60,7 @@ npm install use-sound
 #Stripe 
 npm install react-spinners
 
+npm install @stripe/stripe-js
+
+npm install @supabase/supabase-js
+
