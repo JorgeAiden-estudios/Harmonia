@@ -64,3 +64,13 @@ npm install @stripe/stripe-js
 
 npm install @supabase/supabase-js
 
+
+https://docs.stripe.com/stripe-cli?install-method=homebrew
+
+stripe login
+
+stripe listen --forward-to localhost:3000/api/webhooks 
+#aqui sale un whsec que hay que pegar en .env.local en STRIPE_WEBHOOK_SECRET
+
+
+
