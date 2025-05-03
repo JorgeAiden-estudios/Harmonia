@@ -53,9 +53,9 @@ const AccountContent = () => {
                     <p>
                         Actualmente estás en el <b>{subscription?.prices?.products?.name}</b> plan
                     </p>
-                    <Button className="w-[300px]"
-                    disabled={loading || isLoading}
-                    onClick={redirectToCustomerPortal}>
+                    <Button disabled={loading || isLoading}
+                    onClick={redirectToCustomerPortal}
+                    className="w-[300px]">
                         Abre portal del cliente
                     </Button>
                 </div>

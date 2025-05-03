@@ -4,7 +4,7 @@ import { NextResponse } from "next/server";
 
 import { stripe } from "@/libs/stripe";
 import { getURL } from "@/libs/helpers";
-import { createOrRetrieveCostumer } from "@/libs/supabaseAdmin";
+import { createOrRetrieveCustomer } from "@/libs/supabaseAdmin";
 
 export async function POST() {
     try {
@@ -18,7 +18,7 @@ export async function POST() {
             throw new Error ('No se pudo obtener el usuario');
         }
 
-        const customer = await createOrRetrieveCostumer({
+        const customer = await createOrRetrieveCustomer({
             uuid: user.id || '',
             email: user.email || ''
         });

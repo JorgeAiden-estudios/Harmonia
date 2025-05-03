@@ -1,6 +1,6 @@
 import Stripe from "stripe";
 import { NextResponse } from "next/server";
-
+//import { headers } from "next/headers";
 
 import { stripe } from "@/libs/stripe";
 import { upsertProductRecord, upsertPriceRecord, manageSubscriptionStatusChange } from "@/libs/supabaseAdmin";
@@ -20,6 +20,7 @@ export async function POST(
     request: Request
 ) {
     const body = await request.text();
+    //const sig = headers().get('Stripe-Signature');
     const sig = request.headers.get('Stripe-Signature');
 
     const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET;
@@ -65,7 +66,7 @@ export async function POST(
             throw new Error("Evento relevante no manejado!");
         }
       } catch (error) {
-        console.log(error)
+        console.log(error);
         return new NextResponse('Error del webhook: "El manejador del webhook falló. Ver registros.', { status: 400 });
       }
     }

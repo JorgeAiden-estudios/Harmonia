@@ -10,7 +10,7 @@ import { postData } from "@/libs/helpers";
 import { getStripe } from "@/libs/stripeClient";
 import useSubscribeModal from "@/hooks/useSubscribeModal";
 
-interface SuscribeModalProps {
+interface SubscribeModalProps {
     products: ProductWithPrice[];
 }
 
@@ -24,7 +24,7 @@ const formatPrice = (price: Price) => {
     return priceString;
 }
 
-const SubscribeModal: React.FC<SuscribeModalProps> = ({
+const SubscribeModal: React.FC<SubscribeModalProps> = ({
     products
 }) => {
 

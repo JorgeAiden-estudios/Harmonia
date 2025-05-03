@@ -59,7 +59,7 @@ const upsertPriceRecord = async (price: Stripe.Price) => {
         console.log(`Precio insertado/actualizado: ${price.id}`);
 }
 
-const createOrRetrieveCostumer = async ({
+const createOrRetrieveCustomer = async ({
     email,
     uuid
 }: {
@@ -132,7 +132,7 @@ const manageSubscriptionStatusChange = async (
         .eq('stripe_customer_id', customerId)
         .single();
 
-        if(!noCustomerError) throw noCustomerError;
+        if(noCustomerError) throw noCustomerError;
 
         const { id: uuid } = customerData!;
 
@@ -170,7 +170,7 @@ const manageSubscriptionStatusChange = async (
                 throw error;
             }
 
-            console.log(`Suscripción insertada/actualizada [${subscription.id} for ${uuid}] `);
+            console.log(`Suscripción insertada/actualizada [${subscription.id} para ${uuid}] `);
 
             if (createAction && subscription.default_payment_method && uuid) {
                 await copyBillingDetailsToCustomer(
@@ -178,6 +178,6 @@ const manageSubscriptionStatusChange = async (
                     subscription.default_payment_method as Stripe.PaymentMethod
                 )
             }
-}
+};
 
-export { upsertPriceRecord, upsertProductRecord, createOrRetrieveCostumer, manageSubscriptionStatusChange}
+export { upsertProductRecord, upsertPriceRecord, createOrRetrieveCustomer, manageSubscriptionStatusChange}

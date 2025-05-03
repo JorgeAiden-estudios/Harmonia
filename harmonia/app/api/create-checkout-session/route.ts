@@ -4,7 +4,7 @@ import { NextResponse } from "next/server";
 
 import { stripe } from "@/libs/stripe";
 import { getURL } from "@/libs/helpers";
-import { createOrRetrieveCostumer } from "@/libs/supabaseAdmin";
+import { createOrRetrieveCustomer } from "@/libs/supabaseAdmin";
 
 export async function POST(
     request: Request
@@ -17,7 +17,7 @@ export async function POST(
         });
 
         const {data: { user }} = await supabase.auth.getUser();
-        const customer = await createOrRetrieveCostumer({
+        const customer = await createOrRetrieveCustomer({
             uuid: user?.id || '',
             email: user?.email || ''
         });
