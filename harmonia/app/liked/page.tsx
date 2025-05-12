@@ -49,7 +49,7 @@ const Liked = async () => {
                                 md:mt-0       
                                 ">
                                 <p className="hidden md:block font-semibold text-sm">
-                                    Playlist
+                                    Lista de canciones
                                 </p>
                                 <h1
                                     className="
@@ -59,7 +59,7 @@ const Liked = async () => {
                                         lg:text-7xl
                                         font-bold
                                     ">
-                                    Liked Songs
+                                    Canciones favoritas
                                 </h1>
                             </div>
                     </div>
