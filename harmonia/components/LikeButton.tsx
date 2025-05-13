@@ -91,7 +91,7 @@ const LikeButton: React.FC<LikeButtonProps> = ({
             transition
             "
         >
-            <Icon color={isLiked ? '#22c55e' : 'white'} size={25}></Icon>
+            <Icon color={isLiked ? '#22c55e' : '#FFA258'} size={25}></Icon>
         </button>
     );
 }

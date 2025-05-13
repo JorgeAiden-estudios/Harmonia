@@ -35,7 +35,7 @@ const handleClick = () => {
         items-center
         gap-x-3
         cursor-pointer
-        hover:bg-neutral-800/50
+       hover:bg-[#FFDD9A]/60
         w-full
         p-2
         rounded-md
@@ -67,9 +67,10 @@ const handleClick = () => {
         gap-y-1
         overflow-hidden"
         >
-            <p className="text-white truncate">
+            <p className="text-neutral-900 truncate">
                 {data.title}
             </p>
+
             <p className="text-neutral-400 text-sm truncate">
                 {data.author}
             </p>
