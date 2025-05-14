@@ -58,10 +58,12 @@ const Sidebar: React.FC<SidebarProps>  = ({
             md:flex 
             flex-col 
             gap-y-2 
-            bg-black 
+            bg-gradient-to-b from-[#F2FEFE] to-[#94F4F1]
             h-full 
-            w[300px] 
-            p-2">
+            w-[300px] 
+            p-2
+            rounded-r-2xl
+            shadow-md">
             <Box>
                 <div className="flex 
                 flex-col 
