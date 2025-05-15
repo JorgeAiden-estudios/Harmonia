@@ -75,26 +75,26 @@ const Header: React.FC<HeaderProps> = ({
                     onClick={() => router.back()} 
                     className="
                     rounded-md 
-                    bg-black 
+                    bg-white 
                     flex 
                     items-center 
                     justify-center 
                     hover:opacity-75 
                     transition">
-                        <RxCaretLeft className="text-blue-300" size={35}/>
+                        <RxCaretLeft className="text-orange-300" size={35}/>
                     </button>
 
                     <button 
                     onClick={() => router.forward()} 
                     className="
                     rounded-md 
-                    bg-black 
+                    bg-white 
                     flex 
                     items-center 
                     justify-center 
                     hover:opacity-75 
                     transition">
-                        <RxCaretRight className="text-blue-300" size={35}/>
+                        <RxCaretRight className="text-orange-300" size={35}/>
                     </button>
                 </div>
                 <div className="flex md:hidden gap-x-2 items-center">
@@ -137,13 +137,14 @@ const Header: React.FC<HeaderProps> = ({
                         <div className="flex gap-x-4 items-center">
                             <Button
                             onClick={handleLogout}
-                            className="bg-white px-6 py-2"
+                            className=" bg-orange-300
+                            px-6 py-2"
                             >
                                 Cerrar Sesión
                             </Button>
                             <Button
                             onClick={() => router.push('/account')}
-                            className="bg-white"
+                            className="bg-orange-300"
                             >
                                 <FaUserAlt />
                             </Button>
@@ -155,9 +156,8 @@ const Header: React.FC<HeaderProps> = ({
                         <Button 
                         onClick={authModal.onOpen} 
                         className="
-                        bg-transparent
-                        text-neutral-300 
-                        font-medium
+                       bg-orange-300
+                        px-6 py-2
                         "
                         >
                             Registrarse
@@ -165,7 +165,7 @@ const Header: React.FC<HeaderProps> = ({
                     </div>
                     <div>
                         <Button 
-                        onClick={authModal.onOpen} className="bg-blue-300 px-6 py-2">
+                        onClick={authModal.onOpen} className="bg-orange-300 px-6 py-2">
                             Iniciar Sesión
                         </Button>
                     </div>
