@@ -4,7 +4,7 @@ import AccountContent from "./components/AccountContent";
 const Account = () => {
     return ( 
         <div className="
-        bg-neutral-900
+        bg-gradient-to-b from-[#94F4F1] to-[#00EEE5] 
         rounded-lg
         h-full
         w-full

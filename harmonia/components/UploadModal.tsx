@@ -55,7 +55,7 @@ const UploadModal = () => {
             const songFile = values.song?.[0];
 
             if (!imageFile || !songFile  || !user) {
-                toast.error("Missing fields");
+                toast.error("Faltan archivos");
                 return;
             }
 
@@ -72,7 +72,7 @@ const UploadModal = () => {
 
         if (songError) {
             setIsLoading(false);
-            return toast.error("Failed to upload song");
+            return toast.error("Error al cargar la cancion");
         }
 
         //UPLOAD IMAGE
@@ -86,7 +86,7 @@ const UploadModal = () => {
 
         if (imageError) {
             setIsLoading(false);
-            return toast.error("Failed to upload image");   
+            return toast.error("Error al cargar la imagen");   
         }
 
         const {
@@ -107,12 +107,16 @@ const UploadModal = () => {
 
             router.refresh();
             setIsLoading(false);
-            toast.success("Song uploaded successfully!");
+            toast.success("Canción cargada con éxito!");
             reset();
             uploadModal.onClose();
 
-        }catch (error) {
-            toast.error("Something went wrong!");
+        }catch (error: unknown) {
+            if (error instanceof Error) {
+                toast.error(error.message);
+              } else {
+                toast.error("Algo ha ido mal");
+              }
         }finally {
             setIsLoading(false);
           

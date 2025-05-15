@@ -10,14 +10,16 @@ const Liked = async () => {
 
     return (
         <div
-            className="
-            bg-neutral-900
-            rounded-lg
-            h-full
-            w-full
-            overflow-hidden
-            overflow-y-auto
-            ">
+        className="
+          bg-gradient-to-b 
+          from-[#78E2E0] 
+          to-[#00C7BE] 
+          rounded-2xl
+          h-full
+          w-full
+          overflow-hidden
+          overflow-y-auto
+        ">      
             <Header>
                 <div className="mt-20">
                     <div className="
@@ -49,7 +51,7 @@ const Liked = async () => {
                                 md:mt-0       
                                 ">
                                 <p className="hidden md:block font-semibold text-sm">
-                                    Playlist
+                                    Lista de canciones
                                 </p>
                                 <h1
                                     className="
@@ -59,7 +61,7 @@ const Liked = async () => {
                                         lg:text-7xl
                                         font-bold
                                     ">
-                                    Liked Songs
+                                    Canciones favoritas
                                 </h1>
                             </div>
                     </div>
