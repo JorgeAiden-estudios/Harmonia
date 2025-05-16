@@ -11,8 +11,10 @@ const Liked = async () => {
     return (
         <div
             className="
-            bg-neutral-900
-            rounded-lg
+            bg-gradient-to-b 
+            from-[#78E2E0] 
+            to-[#00C7BE] 
+            rounded-2xl
             h-full
             w-full
             overflow-hidden
@@ -59,14 +61,18 @@ const Liked = async () => {
                                         lg:text-7xl
                                         font-bold
                                     ">
-                                    Liked Songs
+                                    Canciones favoritas
                                 </h1>
                             </div>
                     </div>
-
                 </div>
             </Header>
-            <LikedContent songs={songs}/>
+
+            <div className="px-6 pb-6">
+                <div className="bg-[#FFF8F3]/80 backdrop-blur-md rounded-2xl p-6 shadow-lg border border-[#FFA258]">
+                    <LikedContent songs={songs}/>
+                </div>
+            </div>
         </div>
     );
 }
