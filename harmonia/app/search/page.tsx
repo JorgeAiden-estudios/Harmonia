@@ -6,12 +6,15 @@ import SearchContent from "./components/SearchContent";
 
 interface SearchProps {
     searchParams: { title: string }
-};
+}
 
-export const revalidate = 0;
 
-const Search = async ({ searchParams }: SearchProps) => {
-    const songs = await getSongsByTitle(searchParams.title);
+// CHANGED: 
+//export const revalidate = 0;
+//const Search = async ({ searchParams }: SearchProps) => {
+// FOR:
+export default async function Search({ searchParams }: SearchProps) {
+    const songs = await getSongsByTitle(searchParams.title)
 
     return (
         <div
@@ -38,6 +41,4 @@ const Search = async ({ searchParams }: SearchProps) => {
             </main>
         </div>
     )
-};
-
-export default Search;
+}
