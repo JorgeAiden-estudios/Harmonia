@@ -5,7 +5,7 @@ import SearchInput from "@/components/SearchInput";
 import SearchContent from "./components/SearchContent";
 
 interface SearchProps {
-    searchParams: { title: string }
+    searchParams: Promise<{ title: string }>
 }
 
 
@@ -13,7 +13,8 @@ interface SearchProps {
 //export const revalidate = 0;
 //const Search = async ({ searchParams }: SearchProps) => {
 // FOR:
-export default async function Search({ searchParams }: SearchProps) {
+export default async function Search(props: SearchProps) {
+    const searchParams = await props.searchParams;
     const songs = await getSongsByTitle(searchParams.title)
 
     return (
